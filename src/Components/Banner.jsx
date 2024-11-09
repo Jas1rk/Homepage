@@ -1,26 +1,28 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import bannerImage from "/banner.png";
 import { motion } from "framer-motion";
 
 const Banner = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
- 
   return (
     <>
       <section className="h-[20rem] sm:h-[29rem]">
-        <div className="container mx-auto space-x-10 p-5 sm:p-0 flex justify-center items-center m-auto">
-          <div className="flex flex-col" data-aos="fade-right">
-            <h1 className="text-3xl font-bold">We do your best</h1>
+        <div className="container mx-auto space-x-10 p-5 sm:p-3 flex justify-center items-center m-auto">
+          <motion.div
+            className="flex flex-col"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-3xl font-bold">WE DO YOUR BEST</h1>
+            <div className="flex space-x-4 ">
+              <h1 className="text-2xl font-bold">BEST TECH</h1>
+              <h1 className="text-2xl font-normal">BEST FUTURE</h1>
+            </div>
 
-            <p className="max-w-96">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-              minima, corrupti quidem aut id ea consequatur soluta cupiditate
-              nihil alias aspernatur tenetur et fugit vitae! Architecto et
-              accusantium dolorem rerum?
+            <p className="max-w-96 mt-3">
+              We combine cutting edge technology with immaculate design to
+              create intuitive, user-friendly mobile app solutions that will
+              surpass all expectations.
             </p>
 
             <div className="flex space-x-3 mt-5">
@@ -31,7 +33,7 @@ const Banner = () => {
                 explore
               </button>
             </div>
-          </div>
+          </motion.div>
           <motion.div
             className="hidden sm:flex w-[30rem]"
             initial={{ opacity: 0, y: 50 }}

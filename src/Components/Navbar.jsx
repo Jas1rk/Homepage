@@ -8,19 +8,19 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navbar = useMemo(
     () => [
-      { header: "Home" },
-      { header: "Products" },
-      { header: "Blog" },
-      { header: "Contact" },
-      { header: "About" },
-      { header: "Career" },
+      { header: "Home", headerId: "" },
+      { header: "Products", headerId: "" },
+      { header: "Blog", headerId: "blog" },
+      { header: "Contact", headerId: "" },
+      { header: "About", headerId: "" },
+      { header: "Career", headerId: "" },
     ],
     []
   );
   return (
     <header className="bg-blue-950 text-white">
-      <nav className="container mx-auto flex items-center justify-between p-4">
-        <div className="text-md sm:text-2xl font-bold">HomePage</div>
+      <nav className="container z-50 mx-auto flex items-center justify-between p-4">
+        <div className="text-md sm:text-2xl font-bold">Servigo</div>
         <div className="flex-grow max-w-full sm:max-w-sm md:max-w-md lg:mx-w-lg mx-4">
           <input
             type="search"
@@ -31,6 +31,9 @@ const Navbar = () => {
         <div className="hidden sm:flex sm:space-x-4 md:space-x-6 lg:space-x-8">
           {navbar.map((data, index) => (
             <Link
+              activeClass="active"
+              to={data.headerId}
+              smooth={true}
               className="hover:text-gray-200 hover:underline hover:underline-offset-4 hover:decoration-2 cursor-pointer transition duration-300 ease-in-out"
               key={index}
             >
