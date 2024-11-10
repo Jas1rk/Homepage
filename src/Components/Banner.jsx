@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <>
-      <section className="h-[20rem] sm:h-[29rem]">
-        <div className="container mx-auto space-x-10 p-5 sm:p-3 flex justify-center items-center m-auto">
+      <section className="h-[20rem] sm:h-[40rem]">
+        <div className="container mx-auto space-x-10 p-5 sm:p-3 flex justify-center items-center pt-20">
           <motion.div
             className="flex flex-col"
             initial={{ opacity: 0, x: -50 }}
@@ -35,7 +35,7 @@ const Banner = () => {
             </div>
           </motion.div>
           <motion.div
-            className="hidden sm:flex w-[30rem]"
+            className="hidden sm:flex w-[30rem] pt-10"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}

@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { motion } from "framer-motion";
 
 const Blog = () => {
   const blog = useMemo(
@@ -32,13 +33,23 @@ const Blog = () => {
         content:
           "Explore how Servigo integrates products and services to provide clients with a seamless, end-to-end experience. Highlight the advantages of such integration, from better support to more customized solutions.",
       },
+      {
+        title: "From Concept to Launch: The Journey of a Servigo Product",
+        content:
+          "Take your audience through the journey of creating a product at Servigo, from the initial idea and market research to design, development, and final launch. This can give your readers a behind-the-scenes look at your company’s operations.",
+      },
     ],
     []
   );
   return (
     <>
       <section id="blog" className="">
-        <div className="container p-5 flex flex-col">
+        <motion.div
+          className="container p-5 sm:grid sm:grid-cols-3 sm:gap-4 "
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
           {blog.map((data, index) => (
             <div
               className="bg-white border-indigo-800  border p-4 rounded-md mt-4"
@@ -48,7 +59,7 @@ const Blog = () => {
               <p className="mx-w-80 mt-3">{data.content}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </section>
     </>
   );
