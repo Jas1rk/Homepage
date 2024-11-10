@@ -22,8 +22,8 @@ const Navbar = () => {
       { header: "Home", headerId: "" },
       { header: "Service", headerId: "service" },
       { header: "Blog", headerId: "blog" },
-      { header: "Contact", headerId: "" },
-      { header: "About", headerId: "" },
+      { header: "Contact", headerId: "contact" },
+      { header: "About", headerId: "about" },
       { header: "Career", headerId: "" },
     ],
     []
@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <motion.header
       initial={{ y: 0 }}
-      animate={{ y: scrolled ? 0 : -100 }}
+      animate={{ y: scrolled ? 0 : 0 }}
       transition={{ type: "spring", stiffness: 70, damping: 15 }}
       className="bg-[#fff]  fixed z-50 w-full shadow-sm"
     >

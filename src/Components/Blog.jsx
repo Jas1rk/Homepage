@@ -1,5 +1,5 @@
-import React, { useMemo } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useMemo } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 const Blog = () => {
   const blog = useMemo(
@@ -41,14 +41,24 @@ const Blog = () => {
     ],
     []
   );
+
+  const control = useAnimation();
+  useEffect(() => {
+    control.start({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1 },
+    });
+  }, []);
+
   return (
     <>
       <section id="blog" className="">
+        <h1 className="text-3xl font-bold text-center">Blog</h1>
         <motion.div
           className="container p-5 sm:grid sm:grid-cols-3 sm:gap-4 "
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          animate={control}
         >
           {blog.map((data, index) => (
             <div

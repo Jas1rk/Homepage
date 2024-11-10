@@ -9,9 +9,9 @@ const Banner = () => {
         <div className="container mx-auto space-x-10 p-5 sm:p-3 flex justify-center items-center pt-20">
           <motion.div
             className="flex flex-col"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -70 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 2 }}
           >
             <h1 className="text-3xl font-bold">WE DO YOUR BEST</h1>
             <div className="flex space-x-4 ">
@@ -36,9 +36,9 @@ const Banner = () => {
           </motion.div>
           <motion.div
             className="hidden sm:flex w-[30rem] pt-10"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 70 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 2 }}
           >
             <img src={bannerImage} alt="banner" />
           </motion.div>

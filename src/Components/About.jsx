@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <section>
+      <section className="about">
         <div>
           At Servigo, we are dedicated to delivering comprehensive technology
           solutions that drive growth and innovation. We specialize in providing
