@@ -19,11 +19,11 @@ const Navbar = () => {
 
   const navbar = useMemo(
     () => [
-      { header: "Home", headerId: "" },
+      { header: "Home", headerId: "home" },
       { header: "Service", headerId: "service" },
       { header: "Blog", headerId: "blog" },
-      { header: "Contact", headerId: "contact" },
       { header: "About", headerId: "about" },
+      { header: "Contact", headerId: "contact" },
       { header: "Career", headerId: "" },
     ],
     []

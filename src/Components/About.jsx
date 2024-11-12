@@ -10,7 +10,7 @@ const About = () => {
           <img
             src={aboutUs}
             alt="about"
-            className=" md:w-[26rem] md:h-[22rem]  lg:w-[26rem] lg:h-[22rem]"
+            className=" md:w-[26rem] md:h-[20rem]  lg:w-[26rem] lg:h-[20rem]"
           />
           <p className=" font-normal mt-3 text-center items-center flex justify-center text-slate-950">
             At Servigo, we are dedicated to delivering comprehensive technology
