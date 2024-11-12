@@ -1,22 +1,27 @@
 import React from "react";
 import bannerImage from "/banner.png";
 import { motion } from "framer-motion";
+import Button from "./Common/Button";
 
 const Banner = () => {
   return (
     <>
-      <section  className="h-[20rem] sm:h-[40rem] ">
+      <section className="h-[20rem] sm:h-[40rem] ">
         <div className="container mx-auto space-x-10 p-5 sm:p-3 flex justify-center items-center pt-20">
           <motion.div
-            className="flex flex-col"
+            className="flex flex-col sm:p-5"
             initial={{ opacity: 0, x: -70 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}
           >
             <h1 className="text-3xl font-bold">WE DO YOUR BEST</h1>
-            <div className="flex space-x-4 ">
-              <h1 className="text-2xl font-bold">BEST TECH</h1>
-              <h1 className="text-2xl font-normal">BEST FUTURE</h1>
+            <div className="flex gap-4">
+              <h1 className="text-2xl sm:text-sm md:text-2xl font-bold">
+                BEST TECH
+              </h1>
+              <h1 className="text-2xl sm:text-sm  md:text-2xl font-normal">
+                BEST FUTURE
+              </h1>
             </div>
 
             <p className="max-w-96 mt-3">
@@ -26,12 +31,8 @@ const Banner = () => {
             </p>
 
             <div className="flex space-x-3 mt-5">
-              <button className="bg-blue-950 text-white p-2 w-32 rounded-3xl flex justify-center items-center">
-                sign in
-              </button>
-              <button className="bg-blue-950 text-white p-2 w-32 rounded-3xl flex justify-center items-center">
-                explore
-              </button>
+              <Button>sign in</Button>
+              <Button>explore</Button>
             </div>
           </motion.div>
           <motion.div

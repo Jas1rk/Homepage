@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import contactUs from "/contact.png";
+import Button from "./Common/Button";
 
 const Contact = () => {
   const input = useMemo(
@@ -14,7 +15,7 @@ const Contact = () => {
     <section id="contact">
       <div className="container mx-auto p-10 sm:p-5">
         <h1 className="font-bold text-3xl text-center">Get In Touch</h1>
-        <div className=" mt-3 flex justify-center items-center gap-10 bg-white drop-shadow-lg  border border-blue-400 rounded-md">
+        <div className=" mt-4 flex justify-center items-center gap-10 bg-white drop-shadow-lg  border border-blue-400 rounded-md">
           <form className="px-16">
             {input.map((data, index) => (
               <>
@@ -29,17 +30,18 @@ const Contact = () => {
                 />
               </>
             ))}
-
+            <div className="mt-5">
+              <label htmlFor="">Message</label>
             <textarea
               name=""
               placeholder="say about what on your mind"
-              className=" p-2 border border-blue-500 rounded-md outline-none w-full mt-4"
+              className=" p-2 border  rounded-md outline-none w-full focus:ring-1 focus:ring-[#136a8a]  focus:shadow-lg "
             ></textarea>
 
-            <div className=" flex justify-center items-center mt-4">
-              <button className="bg-blue-950 text-white p-2 w-32 rounded-3xl">
-                submit
-              </button>
+            </div>
+
+            <div className=" flex justify-center items-center mt-3 pb-3">
+             <Button>submit</Button>
             </div>
           </form>
           <img
