@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { navbar } from "./Navitem";
 
 const navVariants = {
   initial: {
@@ -21,16 +22,6 @@ const navVariants = {
     opacity: 0,
   },
 };
-
-const navbar = () => [
-  { header: "Home", headerId: "home" },
-  { header: "Service", headerId: "service" },
-  { header: "Blog", headerId: "blog" },
-  { header: "About", headerId: "about" },
-  { header: "Contact", headerId: "contact" },
-  { header: "Career", headerId: "career" },
-  { header: "Login", headerId: "career" },
-];
 
 const Navbarfixed = () => {
   return (
@@ -54,6 +45,9 @@ const Navbarfixed = () => {
             {data.header}
           </Link>
         ))}
+        <Link className="cursor-pointer p-3 hover:text-[#e91f64]  hover:underline hover:underline-offset-8 hover:decoration-1 ">
+          Login
+        </Link>
       </div>
     </motion.div>
   );

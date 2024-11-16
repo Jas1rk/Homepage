@@ -1,24 +1,13 @@
-import React, {  useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { Link } from "react-scroll";
 import { FaRegUserCircle } from "react-icons/fa";
 import { RiMenu3Line } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
-
+import Mobilenavbar from "./Mobilenavbar";
+import { navbar } from "./Navitem";
 
 const Nabardefault = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const navbar = useMemo(
-    () => [
-      { header: "Home", headerId: "home" },
-      { header: "Service", headerId: "service" },
-      { header: "Blog", headerId: "blog" },
-      { header: "About", headerId: "about" },
-      { header: "Contact", headerId: "contact" },
-      { header: "Career", headerId: "career" },
-    ],
-    []
-  );
 
   return (
     <header className="bg-[#fff]  fixed z-50 w-full shadow-sm">
@@ -34,7 +23,7 @@ const Nabardefault = () => {
           />
         </div>
         <div className="hidden sm:flex sm:space-x-4 md:space-x-6 lg:space-x-8">
-          {navbar.map((data, index) => (
+          {navbar().map((data, index) => (
             <Link
               activeClass="active"
               to={data.headerId}
@@ -46,9 +35,9 @@ const Nabardefault = () => {
             </Link>
           ))}
         </div>
-        <div className="hidden sm:flex sm:ml-3 cursor-pointer text-2xl items-center justify-center">
-          <FaRegUserCircle />
-          {/* <button className="text-sm p-1  bg-white text-black  rounded-md">sign in</button> */}
+        <div className="hidden sm:flex sm:ml-3">
+          <FaRegUserCircle className="text-2xl" />
+          {/* <Button>sign-in</Button> */}
         </div>
         <div className="sm:hidden justify-center items-center">
           {menuOpen ? (
@@ -63,24 +52,7 @@ const Nabardefault = () => {
         </div>
       </nav>
       {/* mobile Menu */}
-      {menuOpen && (
-        <nav className="sm:hidden flex flex-col bg-blue-950 text-white p-3 space-y-2 z-50">
-          {navbar.map((data, index) => (
-            <Link
-              activeClass="active"
-              to={data.headerId}
-              smooth={true}
-              className="  hover:text-gray-200 hover:underline hover:underline-offset-4 hover:decoration-2 cursor-pointer transition duration-300 ease-in-out"
-              key={index}
-            >
-              {data.header}
-            </Link>
-          ))}
-          <Link className="hover:text-gray-200 hover:underline hover:underline-offset-4 hover:decoration-2 cursor-pointer transition duration-300 ease-in-out">
-            Login
-          </Link>
-        </nav>
-      )}
+      {menuOpen && <Mobilenavbar />}
     </header>
   );
 };
