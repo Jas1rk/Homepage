@@ -58,7 +58,7 @@ const Footer = () => {
   };
   return (
     <>
-      <footer className="bg-blue-950 text-white ">
+      <footer className="bg-[#55021a] text-white ">
         <div className="container mx-auto p-8 sm:grid sm:grid-cols-3 gap-10 lg:flex  justify-center ">
           <div
             className="flex-flex-col mt-5"
@@ -171,11 +171,7 @@ const Footer = () => {
           <hr className=" bg-gray-300 my-4 shadow-m" />
         </div>
 
-        <div
-          className="mt-3 flex justify-between p-5"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
+        <div className="mt-3 flex justify-between p-5">
           <p className="font-light text-gray-300 text-sm">
             © 2024 Servigo. All rights reserved.
           </p>

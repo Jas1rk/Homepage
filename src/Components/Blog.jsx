@@ -62,7 +62,7 @@ const Blog = () => {
         >
           {blog.map((data, index) => (
             <div
-              className="bg-white border-indigo-800  border p-4 rounded-md mt-4"
+              className="bg-white border-[#f83c86]  border p-4 rounded-md mt-4"
               key={index}
             >
               <h2 className="font-bold max-w-80">{data.title}</h2>

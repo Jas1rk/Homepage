@@ -6,7 +6,7 @@ import Button from "./Common/Button";
 const Banner = () => {
   return (
     <>
-      <section className="h-[20rem] sm:h-[40rem] ">
+      <section className="h-[20rem] sm:h-[40rem] bg-[#fef1f7]">
         <div className="container mx-auto space-x-10 p-5 sm:p-3 flex justify-center items-center pt-20">
           <motion.div
             className="flex flex-col sm:p-5"

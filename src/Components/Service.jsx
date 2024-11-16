@@ -26,7 +26,7 @@ const Service = () => {
         <div className="container mx-auto p-8  sm:grid sm:grid-cols-2  gap-10 lg:flex justify-center items-center  ">
           {service.map((data, index) => (
             <div
-              className="bg-white rounded-md drop-shadow-lg mt-5 flex flex-col justify-center items-center p-8 duration-500 ease-in-out transform hover:-translate-y-8 border-2 border-transparent hover:border-blue-800"
+              className="bg-[#fef1f7] rounded-md drop-shadow-lg mt-5 flex flex-col justify-center items-center p-8 duration-500 ease-in-out transform hover:-translate-y-8 border-2 border-transparent hover:border-[#ca0c47]"
               key={index}
             >
               <img src={data.image} alt="dev" className="w-52" />

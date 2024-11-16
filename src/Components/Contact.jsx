@@ -15,7 +15,7 @@ const Contact = () => {
     <section id="contact">
       <div className="container mx-auto p-10 sm:p-5">
         <h1 className="font-bold text-3xl text-center">Get In Touch</h1>
-        <div className=" mt-4 flex justify-center items-center gap-10 bg-white drop-shadow-lg  border border-blue-400 rounded-md">
+        <div className=" mt-4 flex justify-center items-center gap-10 bg-white drop-shadow-lg  border border-[#f83c86] rounded-md">
           <form className="px-16">
             {input.map((data, index) => (
               <>
@@ -26,7 +26,7 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder={data.placeholder}
-                  className=" p-2 border  rounded-md outline-none w-full focus:ring-1 focus:ring-[#136a8a]  focus:shadow-lg"
+                  className=" p-2 border  rounded-md outline-none w-full focus:ring-1 focus:ring-[#f83c86]  focus:shadow-lg"
                 />
               </>
             ))}
@@ -35,7 +35,7 @@ const Contact = () => {
             <textarea
               name=""
               placeholder="say about what on your mind"
-              className=" p-2 border  rounded-md outline-none w-full focus:ring-1 focus:ring-[#136a8a]  focus:shadow-lg "
+              className=" p-2 border  rounded-md outline-none w-full focus:ring-1 focus:ring-[#f83c86]  focus:shadow-lg "
             ></textarea>
 
             </div>
