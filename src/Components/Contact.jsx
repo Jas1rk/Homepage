@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="container mx-auto p-10 sm:p-5">
-        <h1 className="font-bold text-3xl text-center">Get In Touch</h1>
+        <h1 className="font-bold text-2xl md:text-3xl text-center">Get In Touch</h1>
         <div className=" mt-4 flex justify-center items-center gap-10 bg-white drop-shadow-lg  border border-[#f83c86] rounded-md">
           <form className="px-16">
             {input.map((data, index) => (

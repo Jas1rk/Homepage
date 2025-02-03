@@ -5,7 +5,7 @@ const About = () => {
   return (
     <>
       <section className="about p-10">
-        <h1 className="text-3xl font-bold text-center">About Us</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-center">About Us</h1>
         <div className="container mt-5 justify-center items-center flex flex-col md:flex-row md:gap-3 p-6 mx-auto drop-shadow-lg bg-white rounded-md">
           <img
             src={aboutUs}

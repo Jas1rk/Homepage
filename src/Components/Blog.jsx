@@ -54,7 +54,7 @@ const Blog = () => {
   return (
     <>
       <section id="blog" className="">
-        <h1 className="text-3xl font-bold text-center">Blog</h1>
+        <h1 className=" text-2xl md:text-3xl font-bold text-center">Blog</h1>
         <motion.div
           className="container p-5 sm:grid sm:grid-cols-3 sm:gap-4 "
           initial={{ opacity: 0, y: 50 }}

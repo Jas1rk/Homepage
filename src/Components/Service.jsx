@@ -20,7 +20,7 @@ const Service = () => {
   return (
     <>
       <section id="service">
-        <h1 className="text-3xl font-bold text-center mt-4">
+        <h1 className="text-2xl md:text-3xl font-bold text-center mt-4">
           Explore Our Service
         </h1>
         <div className="container mx-auto p-8  sm:grid sm:grid-cols-2  gap-10 lg:flex justify-center items-center  ">
